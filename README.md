@@ -67,13 +67,21 @@ Saare charts **screenshots folder** me save hote hai.
 StudentPerformanceAnalytics/
 
 ├── main.py
+
 ├── README.m
+
 └── screenshots/
+
     ├── histogram.png
+
     ├── barchart.png
+
     ├── boxplot.png
+
     ├── scatterplot.png
+
     └── linechart.png
+
 
 ---
 
@@ -93,13 +101,18 @@ Step 3:
 
 ## Screenshots
 
-** Barchart : **
+**Barchart :**
 ![Barchart](/screenshots/barchart.png)
-** Boxplot : **
+
+**Boxplot :**
 ![Boxplot](/screenshots/boxplot.png)
-** Histogram : **
+
+**Histogram :**
 ![Histogram](/screenshots/histogram.png)
-** Linechart : **
+
+**Linechart :**
 ![Linechart](/screenshots/linechart.png)
-** Scatterplot : **
+
+**Scatterplot :**
 ![Scatterplot](/screenshots/scatterplot.png)
+
