@@ -1,3 +1,6 @@
+import statistics
+import matplotlib.pyplot as plt
+
 students = []
 
 def add_student():
@@ -29,6 +32,23 @@ def display_students():
     print("\nAll Students : \n")
     for name, marks in students:
         print(name, "->", marks)
+
+def statistics_report():
+    marks = []
+    for name, mark in students:
+        marks.append(mark)
+    print("Mean=", statistics.mean(marks))
+    print("Median=", statistics.median(marks))
+    print("Mode=", statistics.mode(marks))
+    print("Range=", max(marks) - min(marks))
+    print("Variance=", statistics.variance(marks))
+    print("Standard Deviation=", statistics.stdev(marks))
+    sorted_marks = sorted(marks)
+    q1 = sorted_marks[len(sorted_marks)//4]
+    q3 = sorted_marks[(3*len(sorted_marks))//4]
+    print("Q1=", q1)
+    print("Q3=", q3)
+    print("IQR=", q3 - q1)
 
 
 while True:
