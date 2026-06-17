@@ -50,6 +50,57 @@ def statistics_report():
     print("Q3=", q3)
     print("IQR=", q3 - q1)
 
+def probability_report():
+    marks = []
+    for name, mark in students:
+        marks.append(mark)
+    total_students = len(marks)
+    count = 0
+    for m in marks:
+        if m >= 80:
+            count += 1
+    probability = count / total_students
+    print("\nProbability of student with marks >= 80 : ",probability)
+    count_90 = 0
+    for m in marks:
+        if m >= 90:
+            count_90 += 1
+    conditional_probability = count_90 / count
+    print("Conditional Probability P(>=90 | >=80) : ",conditional_probability)
+
+def generate_charts():
+    names = []
+    marks = []
+    for name, mark in students:
+        names.append(name)
+        marks.append(mark)
+
+    plt.hist(marks)
+    plt.title("Histogram")
+    plt.savefig("screenshots/histogram.png")
+    plt.close()
+
+    plt.bar(names, marks)
+    plt.title("Bar Chart")
+    plt.savefig("screenshots/barchart.png")
+    plt.close()
+
+    plt.boxplot(marks)
+    plt.title("Box Plot")
+    plt.savefig("screenshots/boxplot.png")
+    plt.close()
+
+    plt.scatter(names, marks)
+    plt.title("Scatter Plot")
+    plt.savefig("screenshots/scatterplot.png")
+    plt.close()
+
+    plt.plot(names, marks)
+    plt.title("Line Chart")
+    plt.savefig("screenshots/linechart.png")
+    plt.close()
+
+
 
 while True:
     print("1. Add Student")
